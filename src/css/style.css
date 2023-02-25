@@ -44,6 +44,10 @@
    --line-start: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   background-color: var(--bg);
   color: var(--fg);
@@ -52,12 +56,14 @@ html, body {
 body {
    font-family: "Atkinson Hyperlegible";
    line-height: 1.5;
+   height: 100vh;
+   padding: 0;
+   margin: 0;
 }
 
 a {
    color: var(--link);
    text-decoration: underline;
-   /* text-decoration-color: var(--link-accent); */
    text-underline-offset: 0.125em;
    text-decoration-thickness: 2px;
    transition: color 0.3s ease-out, background-color 0.3s ease-out;
@@ -67,7 +73,6 @@ a {
 
 [href]:hover {
    text-decoration-color: var(--link-accent-hover);
-   /* color: var(--link-accent-hover); */
    color: var(--accent);
    text-decoration: none;
    background: none;
@@ -87,7 +92,7 @@ a:focus {
   color: var(--bg);
 }
 
-main:focus, body:focus {
+main:focus {
    outline: none;
    background-color: var(--bg);
 }

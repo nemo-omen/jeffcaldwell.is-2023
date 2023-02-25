@@ -10,7 +10,7 @@ export let data;
 {#each data.posts as post}
   <li class="post-list-item">
     {#if post.meta.image}
-      <a href="{post.path}">
+      <a href="{post.path}" class="post-list-item-image">
         <img src={post.meta.image} alt="">
       </a>
     {/if}
@@ -42,9 +42,10 @@ export let data;
     grid-template-rows: 1fr auto;
   }
 
-  .post-list-item a img {
-    /* width: 100%; */
-    /* aspect-ratio: 16 / 9; */
+  .post-list-item-image:focus{
+    background: var(--bg);
+    outline: 2px solid var(--accent);
+    background: none;
   }
 
   .post-list-item h2 a {
@@ -62,11 +63,6 @@ export let data;
   }
 
   @media(min-width: 45em) {
-    .post-list-item {
-      /* display: flex; */
-      /* align-items: flex-start; */
-    }
-
     .post-list-item {
       display: grid;
       gap: var(--size-800);
