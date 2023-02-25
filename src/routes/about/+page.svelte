@@ -2,4 +2,4 @@
 
 </script>
 
-<h1>About</h1>
+<h1 class="page-title">About</h1>

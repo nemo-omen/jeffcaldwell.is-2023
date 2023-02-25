@@ -8,25 +8,15 @@
 
    /* COLORS */
    --rich-black: hsla(195, 100%, 6%, 1);
-   --rich-black-highlight: hsla(195, 100%, 10%, 1);
-
-   --tokyo-black: hsla(252, 23%, 9%, 1);
-   --tokyo-black-highlight: hsla(252, 23%, 15%, 1);
-
+   --rich-black-highlight: hsla(195, 100%, 4%, 1);
    --ivory: hsla(61, 94%, 97%, 1);
-   --ivory-muted: hsla(61, 4%, 77%, 1);
-
-   --yellow: hsla(61, 94%, 70%, 1);
    --cerulean: hsla(195, 100%, 66%, 1);
    --light-red: hsla(9, 100%, 64%, 1);
    --light-red-muted: hsla(358, 99%, 50%, 1);
 
    --bg: var(--rich-black);
    --fg: var(--ivory);
-   --fg-muted: var(--ivory-muted);
    --link: var(--ivory-highlight);
-   --accent: var(--light-red);
-   --callout: var(--yellow);
    --link-accent: var(--light-red);
    --link-accent-hover: var(--cerulean);
    --focus: var(--link-accent);
@@ -39,9 +29,6 @@
    --size-700: 2.36rem;
    --size-800: 3.15rem;
    --size-900: 4.2rem;
-
-   /* Code block line number start */
-   --line-start: 0;
 }
 
 html, body {
@@ -60,44 +47,28 @@ a {
    /* text-decoration-color: var(--link-accent); */
    text-underline-offset: 0.125em;
    text-decoration-thickness: 2px;
-   transition: color 0.3s ease-out, background-color 0.3s ease-out;
-   display: inline-block;
-   padding: 0.125em;
+   transition: color 0.3s ease-out;
 }
 
 [href]:hover {
    text-decoration-color: var(--link-accent-hover);
-   /* color: var(--link-accent-hover); */
-   color: var(--accent);
+   color: var(--link-accent-hover);
    text-decoration: none;
-   background: none;
 }
 
 :focus {
    /* background-color: var(--focus); */
-   /* outline: 2px solid var(--focus); */
-   outline: 2px solid var(--accent);
+   text-decoration: none;
+   outline: 2px solid var(--focus);
    outline-offset: 0.25em;
-}
-
-a:focus {
-  text-decoration: none;
-  outline: 2px solid transparent;
-  background: var(--accent);
-  color: var(--bg);
 }
 
 main:focus, body:focus {
    outline: none;
-   background-color: var(--bg);
 }
 
 .page-title {
   letter-spacing: 0.125em;
-  font-size: var(--size-500);
-  border-top: 0.125em solid var(--accent);
-  padding: 0.25em 0;
-  display: inline-block;
 }
 
 h1,
@@ -126,73 +97,40 @@ h3 {
    font-size: var(--size-600);
 }
 
-pre {
-  padding: 1rem;
-}
-
-.shiki {
+code {
    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
       Bitstream Vera Sans Mono, Courier New, monospace;
-  font-size: var(--size-400);
-  counter-reset: step;
-  counter-increment: step calc(var(--start, 1) - 1);
-  background-color: var(--tokyo-black);
-  /* border-radius: var(--size-300); */
-  overflow-x: auto;
-  /* max-width: 100%; */
-  max-width: min(60ch, 100%);
-}
-
-code .highlight-line {
-  background-color: var(--tokyo-black-highlight);
-  display: inline-block;
-  width: 100%;
-}
-
-code .line::before {
-  display: inline-block;
-  content: counter(step);
-  counter-increment: step;
-  width: var(--size-500);
-  padding-right: 0.5em;
-  margin-right: var(--size-600);
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-  color: var(--fg-muted);
-}
-
-code .highlight-line::before {
-  color: var(--fg);
 }
 
 img {
-  max-width: min(55rem, 100%);
+   max-width: min(55rem, 100%);
 }
 
 figcaption {
-  font-size: var(--size-300);
-  font-style: italic;
-  margin-top: 1rem;
+   font-size: var(--size-300);
+
+   font-style: italic;
+   margin-top: 1rem;
 }
 
 blockquote {
-  padding-left: var(--size-600);
-  border-left: 5px solid;
-  font-style: italic;
+   padding-left: var(--size-600);
+   border-left: 5px solid;
+   font-style: italic;
 }
 
 ::selection {
-  color: var(--bg);
-  background: var(--fg);
+   color: var(--bg);
+   background: var(--fg);
 }
 
 .flow>*+* {
-  margin-top: var(--flow-space, 1em);
+   margin-top: var(--flow-space, 1em);
 }
 
 p,
 li {
-  max-width: 60ch;
+   max-width: 75ch;
 }
 
 h1 {
@@ -207,28 +145,25 @@ h3 {
 header,
 main,
 footer {
-  max-width: 55rem;
-  margin: auto;
-  padding: 1rem;
+   max-width: 75ch;
+   margin: auto;
+   padding: 1rem;
 }
 
 .post {
    --flow-space: var(--size-700);
 
-   width: 90vw;
-   width: clamp(16rem, 90vw, 55rem);
-   margin-left: auto;
-   margin-right: auto;
+   /* width: 90vw; */
+   /* width: clamp(16rem, 90vw, 70rem); */
+   /* margin-left: auto;
+   margin-right: auto; */
+   /* padding-left: 1.5rem;
+   padding-right: 1.5rem; */
 }
 
 .post time {
    --flow-space: var(--size-400);
    display: block;
-   font-size: var(--500);
-}
-
-time:not(class) {
-  font-size: var(--size-400);
 }
 
 .post :is(h2, h3) {
@@ -271,9 +206,6 @@ time:not(class) {
    }
 
    .post time {
-      font-size: var(--size-500);
-   }
-   .shiki {
-     font-size: var(--size-500);
+      font-size: var(--size-600);
    }
 }
