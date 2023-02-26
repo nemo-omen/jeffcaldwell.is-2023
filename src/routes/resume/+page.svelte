@@ -125,28 +125,28 @@
         Journalism
       </li>
       <li>
-        web publishing
+        Web Publishing
       </li>
       <li>
-        interviewing
+        Interviewing
       </li>
       <li>
-        editing
+        Editing
       </li>
       <li>
-        information gathering
+        Information Gathering and Research
       </li>
       <li>
-        visual communication
+        Visual Communication
       </li>
       <li>
-        design fundamentals
+        Design Fundamentals
       </li>
       <li>
-        web design
+        Web Design
       </li>
       <li>
-        team management
+        Team Management
       </li>
     </ul>
   </div>
