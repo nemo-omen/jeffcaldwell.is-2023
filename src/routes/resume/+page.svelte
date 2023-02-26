@@ -3,6 +3,7 @@
 </script>
 <svelte:head>
   <title>Resume | Jeff Caldwell</title>
+  <meta name="description" content="Writer and supervisor with over four years of experience in digital journalism seeks to transition into technical writing and web development. Uses a unique background in design, journalism, and computer science to make great looking, accessible websites and to communicate complex ideas simply and concisely." />
 </svelte:head>
 
 <h1 class="page-title">Resume</h1>

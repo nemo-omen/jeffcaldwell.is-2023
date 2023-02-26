@@ -4,6 +4,7 @@ export let data;
 
 <svelte:head>
   <title>Jeff Caldwell | Blog</title>
+  <meta name="description" content="The personal blog of Jeff Caldwell; web developer, writer, and student." /> 
 </svelte:head>
 
 <h1 class="page-title">Blog</h1>
@@ -14,7 +15,8 @@ export let data;
   <li class="post-list-item">
     {#if post.meta.image}
       <a href="{post.path}" class="post-list-item-image">
-        <img src={post.meta.image} alt="">
+        <!-- <img src={post.meta.image} alt="{post.meta.description}" loading="lazy" decoding="async"> -->
+        <img src={post.meta.image} alt="{post.meta.description}">
       </a>
     {/if}
     <div class="post-list-meta">

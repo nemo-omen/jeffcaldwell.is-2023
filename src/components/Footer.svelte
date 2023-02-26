@@ -3,8 +3,6 @@
   const currentDate = new Date();
   const startYear = startDate.getFullYear();
   const currentYear = currentDate.getFullYear();
-  console.log(startYear);
-  console.log(currentYear);
 </script>
 
 <footer>
@@ -45,7 +43,7 @@
     border-top: 2px dotted var(--hover);
   }
   footer *{
-    font-size: var(--size-400);
+    font-size: var(--size-500);
     color: var(--hover);
   }
 
