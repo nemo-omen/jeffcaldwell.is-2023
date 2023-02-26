@@ -1,12 +1,12 @@
 <script>
   export let current;
+  const dev = import.meta.env.DEV;
   $:currentSplit = current.substr(0, 5);
-  // console.log(currentSplit);
 </script>
 
 <header>
   <a href="#maincontent" id="skip" class="visible-hidden">Skip to Content</a>
-  <a href="/" id="site-brand">Jeff Caldwell</a>
+  <a href={dev ? '/' : 'https://jeffcaldwell.is'} id="site-brand" rel="me" aria-label="Jeff Caldwell">Jeff Caldwell</a>
 
   <nav>
     <a href="/" class={current === '/' ? 'current' : ''}>
@@ -18,9 +18,9 @@
     <a href="/about"class={current === '/about' ? 'current' : ''}>
       About
     </a>
-    <a href="/resume"class={current === '/resume' ? 'current' : ''}>
-      Resume
-    </a>
+    <!-- <a href="/resume"class={current === '/resume' ? 'current' : ''}> -->
+    <!--   Resume -->
+    <!-- </a> -->
   </nav>
 </header>
 

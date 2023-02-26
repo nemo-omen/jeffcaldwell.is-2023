@@ -2,6 +2,10 @@
   import { page } from '$app/stores';
 </script>
 
+<svelte:head>
+  <title>Oops!</title>
+</svelte:head>
+
 <div class="nope">
   <h1>{$page.status}: {$page.error.message}</h1>
   <img src="/images/Grackle.svg" alt="An illustration of a dark blue, almost black, bird's head within a light red circle, The bird has angry yellow eyes." width="300" height="300">

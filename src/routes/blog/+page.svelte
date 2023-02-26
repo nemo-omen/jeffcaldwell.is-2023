@@ -1,7 +1,10 @@
 <script>
 export let data;
-
 </script>
+
+<svelte:head>
+  <title>Jeff Caldwell | Blog</title>
+</svelte:head>
 
 <h1 class="page-title">Blog</h1>
 
@@ -61,7 +64,11 @@ export let data;
     padding: 0 0.25rem;
   }
 
-  @media(min-width: 45em) {
+  @media(min-width: 55em) {
+    .post-list {
+      max-width: 55rem;
+      margin: 0 auto;
+    }
     .post-list-item {
       display: grid;
       gap: var(--size-800);

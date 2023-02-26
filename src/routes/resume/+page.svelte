@@ -1,24 +1,36 @@
 <script>
 
 </script>
+<svelte:head>
+  <title>Resume | Jeff Caldwell</title>
+</svelte:head>
 
 <h1 class="page-title">Resume</h1>
 
-<article class="resume flow">
+<article class="resume">
 <section>
-  <h2>
-    <a href="#summary" aria-hidden="true" tabindex="-1" class="section-link">
-      Summary
-    </a>
-  </h2>
+  <div class="section-header">
+
+    <h2 id="summary" aria-label="Summary">
+      <!-- <a href="#summary" aria-hidden="true" tabindex="-1" class="section-link"> -->
+      <!--   <span class="icon"></span> -->
+      <!-- </a> -->
+        Summary
+    </h2>
+  </div>
   <div class="resume-section-content">
     <p>Writer and supervisor with over four years of experience in digital journalism seeks to transition into technical writing and web development. Uses a unique background in design, journalism, and computer science to make great looking, accessible websites and to communicate complex ideas simply and concisely. Works with JavaScript (and loves <a href="https://svelte.dev">Svelte</a>), CSS, and responsive, semantic HTML.</p>
   </div>
 </section>
 <section>
-    <h2 id="experiance">
-      <a href="#experience" aria-hidden="true" tabindex="-1" class="section-link">Experience</a>
-    </h2>
+    <div class="section-header">
+      <h2 id="experiance" aria-label="Experience">
+        Experience
+        <!-- <a href="#experience" aria-hidden="true" tabindex="-1" class="section-link"> -->
+        <!--   <span class="icon"></span> -->
+        <!-- </a> -->
+      </h2>
+    </div>
   <div class="resume-section-content">
     <h3>KLST News</h3>
     <address>San Angelo, TX</address>
@@ -50,12 +62,15 @@
   </div>
 </section>
 <section>
-    <h2>
-      <a href="#education" aria-hidden="true" tabindex="-1" class="section-link">
+  <div class="section-header">
+    <h2 id="education" aria-label="Education">
         Education
-      </a>
+        <!-- <a href="#education" aria-hidden="true" tabindex="-1" class="section-link"> -->
+        <!--   <span class="icon"></span> -->
+        <!-- </a> -->
     </h2>
-    <div class="resume-section-content">
+  </div>
+  <div class="resume-section-content">
     <h3>Angelo State University</h3>
     <h4>BS of Computer Science</h4>
     <time>In progress, 2020 - Present</time>
@@ -65,16 +80,95 @@
     <time>May 2020</time>
   </div>
 </section>
+<section>
+  <div class="section-header">
+    <h2 id="skills">Skills</h2>
+  </div>
+  <div class="resume-section-content">
+    <h3>Technical</h3>
+    <ul>
+      <li>
+        HTML
+      </li>
+      <li>
+        CSS
+      </li>
+      <li>
+        JavaScript
+      </li>
+      <li>
+        C++
+      </li>
+      <li>
+        Adobe Illustrator
+      </li>
+      <li>
+        Adobe Photoshop
+      </li>
+      <li>
+        Adobe Premiere Pro
+      </li>
+      <li>
+        Microsoft Word
+      </li>
+      <li>
+        Microsoft Excel
+      </li>
+      <li>
+        WordPress
+      </li>
+    </ul>
+
+    <h3>Practical</h3>
+    <ul>
+      <li>
+        Journalism
+      </li>
+      <li>
+        web publishing
+      </li>
+      <li>
+        interviewing
+      </li>
+      <li>
+        editing
+      </li>
+      <li>
+        information gathering
+      </li>
+      <li>
+        visual communication
+      </li>
+      <li>
+        design fundamentals
+      </li>
+      <li>
+        web design
+      </li>
+      <li>
+        team management
+      </li>
+    </ul>
+  </div>
+</section>
 </article>
 
 <style>
-.resume {
-  --flow-space: var(--size-900);
+article {
+  /* --flow-space: var(--size-900); */
+  padding: 0;
+  margin: 0;
+  /* height: 100%; */
 }
-.resume section {
-  display: flex;
-  flex-direction: column;
-  /* gap: var(--size-600); */
+
+section {
+  margin-bottom: var(--size-700);
+  height: 100%;
+}
+
+h2 {
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .section-link {
@@ -85,11 +179,11 @@
 .section-link::before {
   content: '#';
   position: absolute;
-  left: -1.25ch;
+  left: -1.5ch;
   top: 0;
   /* line-height: 1; */
   opacity: 0;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   transition: opacity 0.3s ease-out;
 }
 
@@ -99,9 +193,9 @@
 }
 
 ul {
-margin: 1rem;
-padding: 0;
-list-style-type: square;
+  margin: 1rem;
+  padding: 0;
+  list-style-type: square;
 }
 
 li::marker {
@@ -109,9 +203,9 @@ li::marker {
 }
 
 h3 {
-font-size: var(--size-600);
-font-weight: 500;
-margin-bottom: 0.5rem;
+  font-size: var(--size-600);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 h4, li {
@@ -125,16 +219,29 @@ address, time {
 }
 
 h4 {
-color: var(--hover);
+  color: var(--hover);
 }
-/* address, time { */
-/*   margin-top: 1rem; */
-/* } */
+
 
 @media(min-width: 55rem) {
-  .resume section {
-    flex-direction: row;
-    gap: var(--size-900);
+  .resume {
+    max-width: 55rem;
+    margin: 0 auto;
+  }
+  
+  section {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    gap: var(--size-800);
+    height: 100%;
+  }
+
+  h2 {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 2rem;
+    /* position: relative; */
+    text-align: right;
   }
 }
 </style>

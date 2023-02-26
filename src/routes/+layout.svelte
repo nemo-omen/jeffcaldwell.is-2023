@@ -1,9 +1,14 @@
 <script>
   import { fade } from 'svelte/transition';
   import Header from '../components/Header.svelte';
+  import Footer from '../components/Footer.svelte';
   import '../css/style.css';
   export let data;
 </script>
+
+<svelte:head>
+  <title>Jeff Caldwell</title>
+</svelte:head>
 
 <Header current={data.currentRoute}/>
 
@@ -12,3 +17,5 @@
   <slot />
 </main>
 {/key}
+
+<Footer />
