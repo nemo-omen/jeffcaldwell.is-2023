@@ -44,7 +44,6 @@ export let data;
 
   .post-list-item-image:focus{
     background: var(--bg);
-    outline: 2px solid var(--accent);
     background: none;
   }
 

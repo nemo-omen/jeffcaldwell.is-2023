@@ -18,6 +18,9 @@
     <a href="/about"class={current === '/about' ? 'current' : ''}>
       About
     </a>
+    <a href="/resume"class={current === '/resume' ? 'current' : ''}>
+      Resume
+    </a>
   </nav>
 </header>
 
@@ -50,14 +53,17 @@
   #skip {
     top: 0;
     left: 50%;
+    transform: translateX(-50%);
     transition: transform 0.3s ease-out;
     font-size: var(--size-500);
     font-weight: 600;
     padding: 0.125em 0.25em;
+    background: var(--bg);
   }
 
   #skip:focus {
-    transform: translateY(2rem);
+    transform: translate(-50%, 2rem);
+    /* transform: translateX(-50%); */
   }
 
   #site-brand {
@@ -104,10 +110,11 @@
     background-color: transparent;
   }
 
-  nav a:focus {
-    outline: 0.125em solid var(--accent);
-  }
+  /* nav a:focus { */
+  /*   outline: 0.125em solid var(--accent); */
+  /* } */
 
+   nav a:focus::before,
    nav a:hover::before,
    nav a:active::before,
    nav a.current::before {

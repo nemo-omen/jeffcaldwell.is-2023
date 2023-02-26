@@ -25,7 +25,8 @@
    --fg: var(--ivory);
    --fg-muted: var(--ivory-muted);
    --link: var(--ivory-highlight);
-   --accent: var(--light-red);
+   --hover: var(--cerulean);
+   --accent: var(--yellow);
    --callout: var(--yellow);
    --link-accent: var(--light-red);
    --link-accent-hover: var(--cerulean);
@@ -74,24 +75,18 @@ a {
 }
 
 [href]:hover {
-   text-decoration-color: var(--link-accent-hover);
-   color: var(--accent);
+   color: var(--hover);
    text-decoration: none;
    background: none;
 }
 
 :focus {
-   /* background-color: var(--focus); */
-   /* outline: 2px solid var(--focus); */
-   outline: 0.125rem solid var(--accent);
+   outline: 0.125rem solid var(--cerulean);
    outline-offset: 0.125em;
 }
 
 a:focus {
   text-decoration: none;
-  /* outline: 2px solid transparent; */
-  /* background: var(--accent); */
-  /* color: var(--bg); */
   color: currentColor;
 }
 
@@ -103,9 +98,11 @@ main:focus, body:focus {
 .page-title {
   letter-spacing: 0.125em;
   font-size: var(--size-500);
-  border-top: 0.125em solid var(--accent);
+  /* border-top: 0.125em solid var(--accent); */
+  color: var(--hover);
+  /* border-bottom: 0.125em solid var(--hover); */
   padding: 0.25em 0;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 h1,
