@@ -9,10 +9,6 @@ export const GET = async () => {
       return new Date(b.meta.date) - new Date(a.meta.date);
     });
 
-    for (const post of sortedPosts) {
-      console.log(post.meta);
-    }
-
     return json(sortedPosts);
   } catch (error) {
     // console.error(error);

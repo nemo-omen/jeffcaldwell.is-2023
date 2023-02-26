@@ -24,4 +24,10 @@
     /* text-decoration-thickness: 0.125em; */
     /* text-underline-offset: 0.4em; */
   }
+
+  @media(min-width: 45rem) {
+    .callout {
+      font-size: var(--size-700);
+    }
+  }
 </style>

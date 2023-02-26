@@ -63,10 +63,12 @@ body {
 
 a {
    color: var(--link);
+   outline-color: transparent;
+   outline-width: 0.125em;
    text-decoration: underline;
    text-underline-offset: 0.125em;
    text-decoration-thickness: 2px;
-   transition: color 0.3s ease-out, background-color 0.3s ease-out;
+   transition: color 0.3s ease-out, background-color 0.3s ease-out, outline-color 0.3s ease-out;
    display: inline-block;
    padding: 0.125em;
 }
@@ -81,19 +83,20 @@ a {
 :focus {
    /* background-color: var(--focus); */
    /* outline: 2px solid var(--focus); */
-   outline: 2px solid var(--accent);
-   outline-offset: 0.25em;
+   outline: 0.125rem solid var(--accent);
+   outline-offset: 0.125em;
 }
 
 a:focus {
   text-decoration: none;
-  outline: 2px solid transparent;
-  background: var(--accent);
-  color: var(--bg);
+  /* outline: 2px solid transparent; */
+  /* background: var(--accent); */
+  /* color: var(--bg); */
+  color: currentColor;
 }
 
-main:focus {
-   outline: none;
+main:focus, body:focus {
+   outline: 0px solid transparent;
    background-color: var(--bg);
 }
 
@@ -145,7 +148,7 @@ pre {
   /* border-radius: var(--size-300); */
   overflow-x: auto;
   /* max-width: 100%; */
-  max-width: min(60ch, 100%);
+  max-width: min(50rem, 100%);
 }
 
 code .highlight-line {
