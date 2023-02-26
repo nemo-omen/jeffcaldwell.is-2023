@@ -307,4 +307,7 @@ time:not(class) {
    .shiki {
      font-size: var(--size-500);
    }
+   main {
+     margin-bottom: var(--size-900);
+   }
 }
