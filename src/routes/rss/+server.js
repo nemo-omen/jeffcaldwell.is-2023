@@ -13,7 +13,11 @@ export const GET = async () => {
     new Date(b.date) - new Date(a.date)
   );
 
-  const body = render(sortedPosts);
+  const filteredPosts = sortedPosts.filter((post) =>
+    post.meta.draft && post.meta.draft !== true
+  );
+
+  const body = render(filteredPosts);
   const options = {
     headers: {
       "Cache-Control": "max-age=0, s-maxage=3600",

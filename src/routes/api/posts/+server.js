@@ -9,7 +9,11 @@ export const GET = async () => {
       return new Date(b.meta.date) - new Date(a.meta.date);
     });
 
-    for (const post of sortedPosts) {
+    const filteredPosts = sortedPosts.filter((post) =>
+      post.meta.draft !== undefined && post.meta.draft !== true
+    );
+
+    for (const post of filteredPosts) {
       if (post.meta.description) {
         if (post.meta.description.length > 155) {
           console.warn(
@@ -23,7 +27,7 @@ export const GET = async () => {
       }
     }
 
-    return json(sortedPosts);
+    return json(filteredPosts);
   } catch (error) {
     // console.error(error);
     return json(error);
