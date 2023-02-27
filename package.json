@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "postbuild": "pnpx svelte-sitemap --domain https://jeffcaldwell.is",
+    "postbuild": "pnpx svelte-sitemap --domain --reset-time https://jeffcaldwell.is",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -27,7 +27,6 @@
     "node-html-parser": "^6.1.5",
     "prettier": "^2.8.0",
     "prettier-plugin-svelte": "^2.8.1",
-    "sharp": "^0.31.3",
     "shiki": "^0.14.1",
     "svelte": "^3.54.0",
     "svelte-check": "^3.0.1",
@@ -35,8 +34,10 @@
     "tslib": "^2.4.1",
     "typescript": "^4.9.3",
     "vanilla-lazyload": "^17.8.3",
-    "vite": "^4.0.0",
-    "vite-imagetools": "^4.0.18"
+    "vite": "^4.0.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@zerodevx/svelte-img": "^1.2.6"
+  }
 }

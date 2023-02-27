@@ -184,8 +184,14 @@ code .highlight-line::before {
   color: var(--fg);
 }
 
-img {
-  max-width: min(var(--body-s), 100%);
+img,
+video,
+iframe {
+   max-width: min(55rem, 100%);
+   block-size: auto;
+   object-fit: contain;
+   /* aspect-ratio: 16 / 9; */
+   max-inline-size: 100%;
 }
 
 .post img {

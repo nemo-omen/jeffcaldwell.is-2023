@@ -1,4 +1,7 @@
 <script>
+import Post from '../../components/PostItem.svelte';
+
+
 export let data;
 </script>
 
@@ -12,23 +15,7 @@ export let data;
 <ul class="post-list flow">
 {#if data.posts}
 {#each data.posts as post}
-  <li class="post-list-item">
-    {#if post.meta.image}
-      <a href="{post.path}" class="post-list-item-image">
-        <!-- <img src={post.meta.image} alt="{post.meta.description}" loading="lazy" decoding="async"> -->
-        <img src={post.meta.image} alt="{post.meta.description}">
-      </a>
-    {/if}
-    <div class="post-list-meta">
-      <h2>
-        <a href="{post.path}">
-          {post.meta.title}
-        </a>
-      </h2>
-      <time>{post.meta.date}</time>
-      <p>{post.meta.description}</p>
-    </div>
-  </li>
+ <Post {post} />
 {/each}
 {/if}
 </ul>
@@ -41,41 +28,11 @@ export let data;
     --flow-space: var(--size-600);
   }
 
-  .post-list-item {
-    max-width: 55rem;
-    display: grid;
-    grid-template-rows: 1fr auto;
-  }
-
-  .post-list-item-image:focus{
-    background: var(--bg);
-    background: none;
-  }
-
-  .post-list-item h2 a {
-    text-decoration: none;
-  }
   
-  .post-list-item h2 {
-    margin-bottom: 0.25em;
-    margin-top: 0;
-    line-height: 0.8;
-  }
-
-  time {
-    padding: 0 0.25rem;
-  }
-
   @media(min-width: 55em) {
     .post-list {
       max-width: 55rem;
       margin: 0 auto;
-    }
-    .post-list-item {
-      display: grid;
-      gap: var(--size-800);
-      grid-template-rows: unset;
-      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

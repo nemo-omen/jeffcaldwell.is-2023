@@ -1,7 +1,10 @@
 <script>
+  // import { Image } from '../../../components/Image.svelte';
   export let data;
+  
   const { title, date, image, description, Content } = data;
   
+
 </script>
 
 <svelte:head>
@@ -11,6 +14,7 @@
 
 <article class="post flow">
   <img src="{image}" alt="">
+  <!-- <Image url={image} alt={description} width={1080} height={720} /> -->
   <div class="post-header">
     <h1>{data.title}</h1>
     <time>{data.date}</time>

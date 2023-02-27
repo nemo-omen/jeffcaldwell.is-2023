@@ -4,7 +4,7 @@ import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/kit/vite";
 import { mdsvex } from "mdsvex";
 import highlighter from "./src/lib/highlighter.js";
-// import { imagetools } from "vite-imagetools";
+import { imagetools } from "@zerodevx/svelte-img/vite";
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   extensions: [".svelte", ".md"],
@@ -28,9 +28,7 @@ const config = {
   kit: {
     adapter: adapter(),
   },
-  // plugins: [
-  //   imagetools(),
-  // ],
+  plugins: [imagetools()],
 };
 
 export default config;
