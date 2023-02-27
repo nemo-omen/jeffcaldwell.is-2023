@@ -33,6 +33,7 @@
     gap: 1rem;
   }
 
+  /* Skip Link */
   .visible-hidden {
     clip: rect(1px 1px 1px 1px);
     height: 1px;
@@ -56,7 +57,8 @@
     transform: translateX(-50%);
     transition: transform 0.3s ease-out;
     font-size: var(--size-500);
-    font-weight: 600;
+    font-family: 'Noto Sans', system-ui, sans-serif;
+    font-weight: 500;
     padding: 0.125em 0.25em;
     background: var(--bg);
   }
@@ -66,20 +68,26 @@
     /* transform: translateX(-50%); */
   }
 
+  /* Main header link */
   #site-brand {
-    font-size: 2rem;
+    font-size: var(--size-700);
     font-weight: bolder;
     text-decoration: none;
     line-height: 1;
     padding: 0.125em;
     margin: 0;
+    font-family: 'Noto Sans', system-ui, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
   }
-
+  
   nav {
     font-size: var(--size-500);
     display: flex;
     gap: 1rem;
     overflow: visible;
+    font-family: 'Noto Sans', system-ui, sans-serif;
+    font-weight: 500;
   }
 
   nav a {
@@ -87,40 +95,41 @@
     text-decoration: none;
     background-color: transparent;
     color: var(--fg);
+    z-index: 2;
+    display: inline-block;
+    /* transition: color 0.2s ease-out; */
    }
 
    nav a::before {
      content: '';
      position: absolute;
      width: 100%;
-     height: 0.125em;
+     height: 0.15em;
      background-color: var(--accent);
      bottom: 0;
      left: 0;
-     transform-origin: left;
+     transform-origin: bottom right;
      transform: scaleX(0);
-     transition: all 0.2s ease-out;
+     transition: transform 0.2s ease-out;
      color: var(--accent);
+     z-index: -1;
    }
 
   nav a:focus,
   nav a:hover,
   nav a:active,
-  nav a:current {
+  nav a.current {
     background-color: transparent;
+    /* color: var(--bg); */
   }
-
-  /* nav a:focus { */
-  /*   outline: 0.125em solid var(--accent); */
-  /* } */
 
    nav a:focus::before,
    nav a:hover::before,
    nav a:active::before,
    nav a.current::before {
-    transform-origin: left;
+    transform-origin: bottom left;
     transform: scaleX(1);
-    color: var(--accent);
+    /* color: var(--accent); */
     /* background-size: 100% 0.125em; */
    }
 

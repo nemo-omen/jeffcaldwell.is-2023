@@ -2,6 +2,7 @@
   import { fade } from 'svelte/transition';
   import Header from '../components/Header.svelte';
   import Footer from '../components/Footer.svelte';
+  import '../css/fonts.css';
   import '../css/style.css';
   export let data;
 </script>

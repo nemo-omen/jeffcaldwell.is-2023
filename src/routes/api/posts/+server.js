@@ -1,6 +1,8 @@
 import { fetchMarkdownPosts } from "/src/lib/utils.js";
 import { json } from "@sveltejs/kit";
 
+const mode = import.meta.env.MODE;
+
 export const GET = async () => {
   try {
     const allPosts = await fetchMarkdownPosts();
@@ -13,7 +15,11 @@ export const GET = async () => {
       post.meta.draft !== undefined && post.meta.draft !== true
     );
 
-    for (const post of filteredPosts) {
+    console.log(import.meta.env.MODE);
+
+    const posts = mode === "production" ? filteredPosts : sortedPosts;
+
+    for (const post of posts) {
       if (post.meta.description) {
         if (post.meta.description.length > 155) {
           console.warn(
@@ -27,7 +33,7 @@ export const GET = async () => {
       }
     }
 
-    return json(filteredPosts);
+    return json(posts);
   } catch (error) {
     // console.error(error);
     return json(error);
