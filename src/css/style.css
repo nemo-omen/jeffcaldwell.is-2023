@@ -1,12 +1,5 @@
 
 :root {
-   /* CSS HEX */
-   /* --rich-black: #00171fff;
-   --ivory: #fffff0ff;
-   --prussian-blue: #003459ff;
-   --cerulean: #007ea7ff;
-   --light-red: #fe6d73ff; */
-
    /* COLORS */
    --rich-black: hsla(195, 100%, 6%, 1);
    --rich-black-highlight: hsla(195, 100%, 10%, 1);
@@ -19,6 +12,7 @@
 
    --yellow: hsla(61, 94%, 70%, 1);
    --cerulean: hsla(195, 100%, 66%, 1);
+   --cerulean-darker: hsla(195, 100%, 46%, 1);
    --light-red: hsla(9, 100%, 64%, 1);
    --light-red-muted: hsla(358, 99%, 50%, 1);
 
@@ -51,6 +45,13 @@
    --body-m: 60rem;
    --body-l: 70rem;
    --body-xl: 80rem;
+
+  /* Theme Icons */
+   --icon-sun: url('/images/Sun_Light.svg');
+   --icon-moon: url('/images/Moon_Dark.svg');
+
+  /* Default Color Switcher Icons */
+   --switcher-icon: var(--icon-sun);
 }
 
 * {
@@ -60,15 +61,62 @@
 html, body {
   background-color: var(--bg);
   color: var(--fg);
+  scroll-behavior: smooth;
 }
 
 body {
    font-family: "Atkinson Hyperlegible";
    line-height: 1.5;
-   height: 100vh;
    padding: 0;
    margin: 0;
+   transition: background-color 0.3s ease-out;
+   scroll-behavior: smooth;
 }
+
+.content {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+/* Hide Content */
+  .visible-hidden {
+    clip: rect(1px 1px 1px 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .visible-hidden:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: auto;
+  }
+
+  #skip {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease-out;
+    font-size: var(--size-500);
+    font-family: 'Noto Sans', system-ui, sans-serif;
+    font-weight: 500;
+    padding: 0.125em 0.25em;
+    background: var(--bg);
+  }
+
+  #skip:focus {
+    transform: translate(-50%, 2rem);
+    width: var(--size-500);
+    height: var(--size-500);
+    /* transform: translateX(-50%); */
+  }
 
 a {
    color: var(--link);
@@ -106,11 +154,8 @@ main:focus, body:focus {
 .page-title {
   letter-spacing: 0.125em;
   font-size: var(--size-500);
-  /* border-top: 0.125em solid var(--accent); */
   color: var(--hover);
-  /* border-bottom: 0.125em solid var(--hover); */
   padding: 0.25em 0;
-  /* display: inline-block; */
 }
 
 h1,
@@ -125,7 +170,11 @@ h4 {
 
 h1,
 h2 {
-   font-weight: 700;
+   font-weight: 600;
+}
+
+h3 {
+  font-weight: 500;
 }
 
 h1 {
@@ -155,8 +204,6 @@ pre {
   max-width: min(var(--body-s), 100%);
   display: block;
   margin: 0 auto;
-  /* border-radius: var(--size-300); */
-  /* max-width: 100%; */
 }
 
 code .highlight-line {
@@ -187,7 +234,6 @@ iframe {
    max-width: min(55rem, 100%);
    block-size: auto;
    object-fit: contain;
-   /* aspect-ratio: 16 / 9; */
    max-inline-size: 100%;
 }
 
@@ -276,6 +322,34 @@ time:not(class) {
    --flow-space: var(--size-900);
 }
 
+
+@media(prefers-color-scheme:light) {
+  :root {
+    --switcher-icon: var(--icon-moon);
+  }
+
+  html, body, .content {
+    --bg: var(--ivory);
+    --fg: var(--rich-black);
+    --accent: var(--light-red);
+    --hover: var(--cerulean-darker);
+  }
+}
+
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --switcher-icon: var(--icon-sun);
+  }
+
+  html, body, .content{
+    --bg: var(--rich-black);
+    --fg: var(--ivory);
+    --accent: var(--yellow);
+    --hover: var(--cerulean);
+  }
+}
+
 @media (min-width: 50rem) {
    h1 {
       font-size: var(--size-700);
@@ -283,6 +357,10 @@ time:not(class) {
 
    h2 {
       font-size: var(--size-600);
+   }
+
+   h3 {
+     font-size: var(--size-600);
    }
 
    p,

@@ -5,9 +5,10 @@
 </script>
 
 <header>
-  <a href="#maincontent" id="skip" class="visible-hidden">Skip to Content</a>
+  
   <a href={dev ? '/' : 'https://jeffcaldwell.is'} id="site-brand" rel="me" aria-label="Jeff Caldwell">Jeff Caldwell</a>
 
+  <!-- <input type="checkbox" name="toggle" id="color-mode"> -->
   <nav>
     <a href="/" class={current === '/' ? 'current' : ''}>
       Home
@@ -31,41 +32,6 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-  }
-
-  /* Skip Link */
-  .visible-hidden {
-    clip: rect(1px 1px 1px 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-
-  .visible-hidden:focus {
-    clip: auto;
-    height: auto;
-    overflow: auto;
-    position: absolute;
-    width: auto;
-  }
-
-  #skip {
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: transform 0.3s ease-out;
-    font-size: var(--size-500);
-    font-family: 'Noto Sans', system-ui, sans-serif;
-    font-weight: 500;
-    padding: 0.125em 0.25em;
-    background: var(--bg);
-  }
-
-  #skip:focus {
-    transform: translate(-50%, 2rem);
-    /* transform: translateX(-50%); */
   }
 
   /* Main header link */

@@ -2,6 +2,10 @@
 
 </script>
 
+<svelte:head>
+  <meta name="description" content="Jeff Caldwell is a web developer, writer, journalist, and student." />
+</svelte:head>
+
 <h1 class="page-title">Welcome</h1>
 <article>
   <h2 class="callout">Hey, <span class="callout-highlight">I'm Jeff</span>. I'm a web developer, writer, journalist, and student.</h2>
@@ -11,7 +15,7 @@
     
   </p>
   <p class="message">
-    I live in Texas, where I supervise a team of digital journalists. I'm also finishing up a degree in computer science. You can find out what I'm working on and writing about at the <a href="/blog">blog</a> and you can learn more about me <a href="/about">here</a>.
+    I live in Texas, where I supervise a team of digital journalists. I'm also finishing up a degree in computer science. You can find out what I'm working on and writing about at the <a href="/blog">blog</a> and you can learn more about me at <a href="/about">about</a>.
   </p>
 </article>
 <style>
@@ -27,7 +31,7 @@
   .callout-highlight {
     display: inline-block;
     padding: 0.125em;
-    color: var(--callout);
+    color: var(--accent);
   }
 
   .message a, .message-larger a {

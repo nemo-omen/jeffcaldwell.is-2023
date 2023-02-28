@@ -204,8 +204,8 @@ li::marker {
 }
 
 h3 {
-  font-size: var(--size-600);
-  font-weight: 500;
+  /* font-size: var(--size-600); */
+  /* font-weight: 500; */
   margin-bottom: 0.5rem;
 }
 
@@ -221,6 +221,7 @@ address, time {
 
 h4 {
   color: var(--hover);
+  font-weight: 500;
 }
 
 

@@ -10,6 +10,7 @@
 <svelte:head>
   <title>Jeff Caldwell</title>
 </svelte:head>
+<a href="#maincontent" id="skip" class="visible-hidden">Skip to Content</a>
 
 <Header current={data.currentRoute}/>
 
