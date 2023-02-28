@@ -113,8 +113,8 @@ body {
 
   #skip:focus {
     transform: translate(-50%, 2rem);
-    width: var(--size-500);
-    height: var(--size-500);
+    /* width: var(--size-500); */
+    /* height: var(--size-500); */
     /* transform: translateX(-50%); */
   }
 
