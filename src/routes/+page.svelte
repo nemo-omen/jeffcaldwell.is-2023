@@ -11,7 +11,7 @@
   <h2 class="callout">Hey, <span class="callout-highlight">I'm Jeff</span>. I'm a web developer, writer, journalist, and student.</h2>
 
   <p class="message-larger">
-    I love making websites and writing. I'm transitioning from a career in journalism into web development and technical writing. <a href="/resume">Check out my resume</a>.
+    I love making websites and writing. I'm transitioning from a career in journalism into web development and technical writing. <a href="/resume" class="resume-link">Check out my resume</a>.
     
   </p>
   <p class="message">
@@ -36,6 +36,16 @@
 
   .message a, .message-larger a {
     color: var(--accent);
+    text-underline-offset: 0.3em;
+  }
+
+  .resume-link {
+  }
+
+  @media(prefers-color-scheme: light) {
+  .message a, .message-larger a {
+    color: currentColor;
+  }
   }
 
   @media(min-width: 45rem) {

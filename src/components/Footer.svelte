@@ -72,6 +72,12 @@
     list-style-type: '';
   }
 
+  @media(prefers-color-scheme: light) {
+    footer *, footer h2 {
+      color: var(--fg);
+    }
+  }
+
   @media(min-width: 50rem) {
     .footer-inner {
       display: grid;

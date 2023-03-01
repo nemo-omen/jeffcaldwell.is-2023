@@ -15,7 +15,7 @@ export const GET = async () => {
       post.meta.draft !== undefined && post.meta.draft !== true
     );
 
-    console.log(import.meta.env.MODE);
+    // console.log(import.meta.env.MODE);
 
     const posts = mode === "production" ? filteredPosts : sortedPosts;
 

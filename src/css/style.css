@@ -5,15 +5,22 @@
    --rich-black-highlight: hsla(195, 100%, 10%, 1);
 
    --tokyo-black: hsla(252, 23%, 9%, 1);
+   --tokyo-black-contrast-med: hsla(252, 23%, 6%, 1);
+   --tokyo-black-contrast-high: hsla(252, 23%, 2%, 1);
    --tokyo-black-highlight: hsla(252, 23%, 15%, 1);
 
    --ivory: hsla(61, 94%, 97%, 1);
+   --ivory-contrast-med: hsla(61, 92%, 98%, 1);
+   --ivory-contrast-high: hsla(61, 71%, 99%, 1);
    --ivory-muted: hsla(61, 4%, 77%, 1);
 
    --yellow: hsla(61, 94%, 70%, 1);
    --cerulean: hsla(195, 100%, 66%, 1);
-   --cerulean-darker: hsla(195, 100%, 46%, 1);
+   --cerulean-contrast-high: hsla(198, 100%, 40%, 1);
+   --cerulean-darker: hsla(195, 100%, 42%, 1);
    --light-red: hsla(9, 100%, 64%, 1);
+   --light-red-contrast-med: hsla(7, 60%, 1);
+   --light-red-contrast-high: hsla(9, 100%, 56%, 1);
    --light-red-muted: hsla(358, 99%, 50%, 1);
 
    --bg: var(--rich-black);
@@ -113,9 +120,6 @@ body {
 
   #skip:focus {
     transform: translate(-50%, 2rem);
-    /* width: var(--size-500); */
-    /* height: var(--size-500); */
-    /* transform: translateX(-50%); */
   }
 
 a {
@@ -153,7 +157,8 @@ main:focus, body:focus {
 
 .page-title {
   letter-spacing: 0.125em;
-  font-size: var(--size-500);
+  font-size: var(--size-600);
+  font-weight: 500;
   color: var(--hover);
   padding: 0.25em 0;
 }
@@ -329,10 +334,10 @@ time:not(class) {
   }
 
   html, body, .content {
-    --bg: var(--ivory);
-    --fg: var(--rich-black);
-    --accent: var(--light-red);
-    --hover: var(--cerulean-darker);
+    --bg: var(--ivory-contrast-med);
+    --fg: var(--tokyo-black-contrast-high);
+    --accent: var(--light-red-contrast-high);
+    --hover: var(--cerulean-contrast-high);
   }
 }
 

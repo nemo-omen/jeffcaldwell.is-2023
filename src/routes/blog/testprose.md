@@ -3,6 +3,7 @@ title: Test Prose
 date: Saturday, February 25, 2023
 image: /images/screenshot.webp
 description: "This is a description of a blog post. We're all sure it will be inticing enough for you, random reader, to click on."
+draft: true
 ---
 
 Lorem ipsum dolor sit amet, [consectetur adipiscing elit](/), sed do eiusmod

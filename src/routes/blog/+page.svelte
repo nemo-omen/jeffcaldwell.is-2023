@@ -41,11 +41,11 @@ if(data.posts.length > 0) {
   }
 
   .nope {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 
 .larger {
   font-size: var(--size-600);
@@ -53,7 +53,8 @@ if(data.posts.length > 0) {
   @media(min-width: 55em) {
     .post-list {
       max-width: 55rem;
-      margin: 0 auto;
+      margin-top: var(--size-900);
+      /* margin: 0 auto; */
     }
   }
 </style>
