@@ -32,6 +32,8 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    /* align-self: stretch; */
+    width: 100%;
   }
 
   /* Main header link */
