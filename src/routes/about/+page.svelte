@@ -10,7 +10,7 @@ I'm a digital journalist in the last year of my computer science degree in San A
 </p>
 
 <p>
-I grew up in San Angelo but spent most of my adulthood living in Brooklyn, NY, where I worked in the print industry making cool stuff for clients like the <em>New York Public Library</em>_ and <em>Last Week Tonight with John Oliver</em>.
+I grew up in San Angelo but spent most of my adulthood living in Brooklyn, NY, where I worked in the print industry making cool stuff for clients like the <em>New York Public Library</em> and <em>Last Week Tonight with John Oliver</em>.
 </p>
 
 <p>
