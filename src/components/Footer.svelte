@@ -41,7 +41,6 @@
 <style>
   footer {
     border-top: 2px dotted var(--hover);
-    margin-top: var(--size-900);
   }
   footer *{
     font-size: var(--size-500);
