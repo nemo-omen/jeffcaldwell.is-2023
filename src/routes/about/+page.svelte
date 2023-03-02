@@ -1,6 +1,11 @@
 <script>
 
 </script>
+<svelte:head>
+<title>About | Jeff Caldwell</title>
+<meta name="description" content="Jeff Caldwell is a web developer, technical writer, student, and digital journalist." />
+</svelte:head>
+
 
 <h1 class="page-title">About</h1>
 

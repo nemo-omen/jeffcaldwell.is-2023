@@ -3,6 +3,7 @@
 </script>
 
 <svelte:head>
+  <title>Jeff Caldwell</title>
   <meta name="description" content="Jeff Caldwell is a web developer, writer, journalist, and student." />
 </svelte:head>
 

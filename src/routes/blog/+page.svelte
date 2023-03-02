@@ -11,7 +11,7 @@ if(data.posts.length > 0) {
 </script>
 
 <svelte:head>
-  <title>Jeff Caldwell | Blog</title>
+  <title>Blog | Jeff Caldell</title>
   <meta name="description" content="The personal blog of Jeff Caldwell; web developer, writer, and student." /> 
 </svelte:head>
 

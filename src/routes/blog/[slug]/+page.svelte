@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-  <title>{title}</title>
+  <title>{title} | Jeff Caldwell</title>
   <meta name="description" content={description} />
 </svelte:head>
 
@@ -24,6 +24,9 @@
 </article>
 
 <style>
+  article {
+    margin-top: var(--size-900);
+  }
   .post-header {
     margin-bottom: var(--size-800);
   }
