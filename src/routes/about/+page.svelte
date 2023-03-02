@@ -19,7 +19,7 @@ I grew up in San Angelo but spent most of my adulthood living in Brooklyn, NY, w
 </p>
 
 <p>
-I moved back to San Angelo in 2018 to pursue my degree and got a job as a camera operator at the local tv news station. It was only a short time before I found my way into the newsroom, first as a news photographer, then as a multimedia journalist.
+I moved back to San Angelo in 2018 to pursue my degree and got a job as a camera operator at the local tv news station. It was only a short time before I found my way into the newsroom, first as a news photographer, then as a multimedia journalist. Eventually I moved onto the digital team and covered local news by writing articles instead of shooting and editing video.
 </p>
 
 <p>
