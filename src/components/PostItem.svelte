@@ -49,7 +49,7 @@ export let post;
   .post-list-item h2 {
     margin-bottom: 0.25em;
     margin-top: 0;
-    line-height: 0.8;
+    line-height: 1.2;
   }
 
   time {

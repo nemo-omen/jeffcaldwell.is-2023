@@ -81,13 +81,26 @@ body {
    min-height: 100vh;
    display: grid;
    grid-template-rows: auto 1fr auto;
-   align-items: space-between;
+   grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+   /* align-items: space-between; */
 }
 
 main {
    height: 100%;
    min-height: 100%;
    margin-bottom: var(--size-900);
+   grid-area: main;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
 }
 
 .content {
@@ -296,7 +309,7 @@ h3 {
 header,
 main,
 .footer-inner {
-  max-width: var(--body-l);
+  width: var(--body-l);
   margin: auto;
   padding: 1rem;
 }

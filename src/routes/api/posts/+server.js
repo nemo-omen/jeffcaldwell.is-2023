@@ -6,6 +6,7 @@ const mode = import.meta.env.MODE;
 export const GET = async () => {
   try {
     const allPosts = await fetchMarkdownPosts();
+    console.log(allPosts);
 
     const sortedPosts = allPosts.sort((a, b) => {
       return new Date(b.meta.date) - new Date(a.meta.date);
@@ -15,7 +16,7 @@ export const GET = async () => {
       post.meta.draft !== undefined && post.meta.draft !== true
     );
 
-    // console.log(import.meta.env.MODE);
+    console.log(mode);
 
     const posts = mode === "production" ? filteredPosts : sortedPosts;
 
