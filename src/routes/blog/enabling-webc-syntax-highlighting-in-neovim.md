@@ -63,8 +63,8 @@ yay nvim-nightly
 
 If you're running Arch, I recommend using the
 [Chaotic Aur](https://aur.chaotic.cx/) version, so you don't have to spend time
-rebuilding the package whenever an update comes out (every night... or every
-time you get around to running updates).
+rebuilding the package whenever an update comes out (every night, or every time
+you get around to running updates).
 
 If you open NeoVim and type `:version`, you should get an ungodly amount of
 output with `NVIM 0.9.0-dev` right up at the top. Congratulations! You're on the
