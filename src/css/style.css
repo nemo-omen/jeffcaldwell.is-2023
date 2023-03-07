@@ -359,19 +359,19 @@ time:not(class) {
 }
 
 
-@media(prefers-color-scheme:light) {
-  :root {
-    --switcher-icon: var(--icon-moon);
-  }
-
-  html, body, .content {
-    --bg: var(--ivory-contrast-med);
-    --bg-highlight: var(--ivory-muted);
-    --fg: var(--tokyo-black-contrast-high);
-    --accent: var(--light-red-contrast-high);
-    --hover: var(--cerulean-contrast-high);
-  }
-}
+/* @media(prefers-color-scheme:light) { */
+/*   :root { */
+/*     --switcher-icon: var(--icon-moon); */
+/*   } */
+/**/
+/*   html, body, .content { */
+/*     --bg: var(--ivory-contrast-med); */
+/*     --bg-highlight: var(--ivory-muted); */
+/*     --fg: var(--tokyo-black-contrast-high); */
+/*     --accent: var(--light-red-contrast-high); */
+/*     --hover: var(--cerulean-contrast-high); */
+/*   } */
+/* } */
 
 
 @media(prefers-color-scheme: dark) {
