@@ -1,4 +1,4 @@
-import { fetchMarkdownPosts } from "../../lib/utils";
+import { fetchMarkdownPosts } from "../../lib/utils.js";
 
 const siteURL = "https://jeffcaldwell.is";
 const siteTitle = "Jeff Caldwell";
@@ -13,9 +13,7 @@ export const GET = async () => {
     new Date(b.date) - new Date(a.date)
   );
 
-  const filteredPosts = sortedPosts.filter((post) =>
-    post.meta.draft && post.meta.draft !== true
-  );
+  const filteredPosts = sortedPosts.filter((post) => post.meta.draft !== true);
 
   const body = render(filteredPosts);
   const options = {
