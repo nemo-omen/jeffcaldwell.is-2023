@@ -1,5 +1,6 @@
 <script>
 import Post from '../../components/PostItem.svelte';
+import Notice from '../../components/Notice.svelte';
 export let data;
 let hasPosts = false;
 

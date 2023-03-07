@@ -12,7 +12,7 @@
    --ivory: hsla(61, 94%, 97%, 1);
    --ivory-contrast-med: hsla(61, 92%, 98%, 1);
    --ivory-contrast-high: hsla(61, 71%, 99%, 1);
-   --ivory-muted: hsla(61, 4%, 77%, 1);
+   --ivory-muted: hsla(61, 4%, 90%, 1);
 
    --yellow: hsla(61, 94%, 70%, 1);
    --cerulean: hsla(195, 100%, 66%, 1);
@@ -24,6 +24,7 @@
    --light-red-muted: hsla(358, 99%, 50%, 1);
 
    --bg: var(--rich-black);
+   --bg-highlight: var(--rich-black-highlight);
    --fg: var(--ivory);
    --fg-muted: var(--ivory-muted);
    --link: var(--ivory-highlight);
@@ -234,6 +235,13 @@ pre {
   margin: 0 auto;
 }
 
+code:not(pre>code){
+  background-color: var(--bg-highlight);
+  display: inline-block;
+  padding: 0 0.25em;
+  /* color: var(--hover); */
+}
+
 code .highlight-line {
   background-color: var(--tokyo-black-highlight);
   display: inline-block;
@@ -358,6 +366,7 @@ time:not(class) {
 
   html, body, .content {
     --bg: var(--ivory-contrast-med);
+    --bg-highlight: var(--ivory-muted);
     --fg: var(--tokyo-black-contrast-high);
     --accent: var(--light-red-contrast-high);
     --hover: var(--cerulean-contrast-high);

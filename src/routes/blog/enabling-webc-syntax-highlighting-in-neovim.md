@@ -7,6 +7,10 @@ description: Tired of looking at plain WebC files with no syntax highlighting in
 draft: false
 ---
 
+<script>
+    import Notice from '../../components/Notice.svelte';
+</script>
+
 I was messing around with [WebC](https://github.com/11ty/webc) from
 [Eleventy](https://www.11ty.dev) over the weekend and ran into a problem getting
 syntax highlighting to work in [NeoVim](https://neovim.io). The lack of any
@@ -17,17 +21,21 @@ Here's what I figured out:
 
 ## Preliminary Setup
 
-**Warning:** If you don't already have NeoVim configured or you're totally new
-to setting it up, I don't recommend trying this until you're a little more
-familiar. I'm by no means a NeoVim expert. In fact, I've only had my config for
-a couple of weeks, and it took me a couple of tries to get this right. I don't
-know how well the following steps will work with configurations like
-[NvChad](https://nvchad.com/) or [LunarVim](https://www.lunarvim.org/) either.
-So, you know, YMMV.
+<Notice type="warning">
+
+### Warning
+
+If you don't already have NeoVim configured or you're totally new to setting it
+up, I don't recommend trying this until you're a little more familiar. I'm by no
+means a NeoVim expert. In fact, I've only had my config for a couple of weeks,
+and it took me a couple of tries to get this right. I don't know how well the
+following steps will work with configurations like [NvChad](https://nvchad.com/)
+or [LunarVim](https://www.lunarvim.org/) either. So, you know, YMMV.
 
 If you're interested in building your own NeoVim config,
 [this tutorial](https://programmingpercy.tech/blog/learn-how-to-use-neovim-as-ide/)
 by Percy Bolmér is a good place to get started.
+</Notice>
 
 First, you'll need to make sure you have the
 [Treesitter plugin](https://github.com/nvim-treesitter/nvim-treesitter)
