@@ -27,6 +27,7 @@
     margin-bottom: 0;
   }
 
+  .callout :global(h2),
   .callout :global(h3),
   .callout :global(h4) {
     font-size: var(--size-500);
