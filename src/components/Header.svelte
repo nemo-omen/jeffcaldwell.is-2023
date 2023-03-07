@@ -50,8 +50,10 @@
   }
   
   nav {
+    width: 100%;
     font-size: var(--size-500);
     display: flex;
+    justify-content: space-between;
     gap: 1rem;
     overflow: visible;
     font-family: 'Noto Sans', system-ui, sans-serif;
@@ -108,10 +110,20 @@
     /* text-decoration-thickness: 0.125em; */
   /* } */
 
-  @media (min-width: 45em) {
+  @media (min-width: 45rem) {
     header {
       flex-direction: row;
       justify-content: space-between;
+    }
+
+    nav {
+      width: unset;
+    }
+  }
+
+  @media (min-width: 25rem) {
+    nav {
+      justify-content: space-around;
     }
   }
 </style>
