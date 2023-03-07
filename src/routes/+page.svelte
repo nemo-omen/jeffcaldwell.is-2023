@@ -41,6 +41,7 @@
   }
 
   .resume-link {
+    color: var(--yellow);
   }
 
   @media(prefers-color-scheme: light) {
