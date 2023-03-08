@@ -11,7 +11,7 @@
 
 <article>
 <div class="about-header">
-  <Image alt="Jeff Caldwell, a white man with dark hair and a beard wearing dark-rimmed glasses faces the camera with a hint of a smile on his face. He wears a dark-colored flannel over a navy t-shirt. The beginnings of gray hair can be seen in various spots on his beard. The light, warmly-colored wood wall behind him is blurred out." width="400" height="400" url="/images/Me.webp"/>
+  <Image alt="Jeff Caldwell, a white man with dark hair and a beard wearing dark-rimmed glasses faces the camera with a hint of a smile on his face. He wears a dark-colored flannel over a navy t-shirt. The beginnings of gray hair can be seen in various spots on his beard. The light, warmly-colored wood wall behind him is blurred out." width="400" height="400" url="/images/Me2.webp"/>
 </div>
 
 <p>
